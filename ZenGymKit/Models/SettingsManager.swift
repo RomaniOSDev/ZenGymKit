@@ -77,7 +77,7 @@ class SettingsManager: ObservableObject {
     func openPrivacyPolicy() {
         print("Opening Privacy Policy...")
         // Implementation for privacy policy
-        if let url = URL(string: "https://zengym.app/privacy") {
+        if let url = URL(string: "https://www.termsfeed.com/live/3e2d55ef-9be6-4ec7-8554-13d142702d01") {
             print("Opening URL: \(url)")
             UIApplication.shared.open(url) { success in
                 print("Privacy Policy opened: \(success)")
