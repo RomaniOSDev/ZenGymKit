@@ -101,7 +101,7 @@ struct WorkoutView: View {
         HStack {
             HStack {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                 
                 TextField("Search workouts...", text: $searchText)
                     .textFieldStyle(.plain)
@@ -113,7 +113,7 @@ struct WorkoutView: View {
                         isSearchFocused = false
                     }) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                 }
             }
@@ -190,11 +190,11 @@ struct WorkoutCard: View {
                         Text(workout.name)
                             .font(.title3)
                             .fontWeight(.bold)
-                            .foregroundColor(.primary)
+                            .foregroundColor(.appTextPrimary)
                         
                         Text(workout.description)
                             .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                             .lineLimit(2)
                     }
                     
@@ -208,14 +208,14 @@ struct WorkoutCard: View {
                         
                         Text("\(workout.exercises.count) exercises")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                 }
                 
                 HStack {
                     Label("\(workout.exercises.count) exercises", systemImage: "dumbbell")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     Spacer()
                     

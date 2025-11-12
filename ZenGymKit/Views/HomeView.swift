@@ -45,11 +45,11 @@ struct HomeView: View {
             Text(greeting)
                 .font(.title2)
                 .fontWeight(.semibold)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
             
             Text("Ready to achieve your fitness goals?")
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -115,7 +115,7 @@ struct HomeView: View {
                     
                     Text("days")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 
                 Spacer()
@@ -127,7 +127,7 @@ struct HomeView: View {
                     
                     Text("days")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
             }
         }
@@ -184,15 +184,15 @@ struct HomeView: View {
                 VStack(spacing: 12) {
                     Image(systemName: "dumbbell")
                         .font(.largeTitle)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     Text("No workouts yet")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     Text("Start your first workout to see your progress here")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                         .multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)
@@ -235,11 +235,11 @@ struct StatCard: View {
             Text(value)
                 .font(.title2)
                 .fontWeight(.bold)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
             
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
@@ -268,7 +268,7 @@ struct RecentWorkoutRow: View {
                 
                 Text(workout.startTime, style: .date)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
             
             Spacer()
@@ -280,7 +280,7 @@ struct RecentWorkoutRow: View {
                 
                 Text(workout.startTime, style: .time)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
         }
         .padding()

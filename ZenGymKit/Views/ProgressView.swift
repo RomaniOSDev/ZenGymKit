@@ -197,11 +197,11 @@ struct ProgressTrackingView: View {
                 VStack(spacing: 8) {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                         .font(.largeTitle)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     Text("No workout history yet")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
@@ -258,7 +258,7 @@ struct SimpleWeeklyChart: View {
             if data.allSatisfy({ $0 == 0 }) {
                 Text("No workouts this week")
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .frame(height: 80)
             } else {
@@ -279,7 +279,7 @@ struct SimpleWeeklyChart: View {
                             
                             Text("D\(index + 1)")
                                 .font(.caption2)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                         }
                     }
                 }
@@ -335,7 +335,7 @@ struct SimpleFrequencyChart: View {
             if data.allSatisfy({ $0 == 0 }) {
                 Text("No workouts in the last 7 weeks")
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .frame(height: 80)
             } else {
@@ -356,7 +356,7 @@ struct SimpleFrequencyChart: View {
                             
                             Text("W\(index + 1)")
                                 .font(.caption2)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                         }
                     }
                 }
@@ -424,16 +424,16 @@ struct ProgressStatCard: View {
             Text(value)
                 .font(.title2)
                 .fontWeight(.bold)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
             
             Text(title)
                 .font(.caption)
                 .fontWeight(.medium)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
             
             Text(subtitle)
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -464,12 +464,12 @@ struct AchievementCard: View {
             Text(title)
                 .font(.caption)
                 .fontWeight(.medium)
-                .foregroundColor(isUnlocked ? .primary : .secondary)
+                .foregroundColor(isUnlocked ? .appTextPrimary : .appTextSecondary)
                 .multilineTextAlignment(.center)
             
             Text(description)
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
         }
@@ -494,7 +494,7 @@ struct WorkoutHistoryRow: View {
                 
                 Text(workout.startTime, style: .date)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
             
             Spacer()
@@ -506,7 +506,7 @@ struct WorkoutHistoryRow: View {
                 
                 Text(workout.startTime, style: .time)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
         }
         .padding()

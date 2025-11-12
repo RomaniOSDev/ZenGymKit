@@ -64,7 +64,7 @@ struct ActiveWorkoutView: View {
 
                     Text("Exercise \(currentExerciseIndex + 1) of \(currentWorkout?.exercises.count ?? 0)")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
 
                     ProgressView(value: Double(currentExerciseIndex + (currentSet > 1 ? 1 : 0)), total: Double(currentWorkout?.exercises.count ?? 1))
                         .progressViewStyle(LinearProgressViewStyle(tint: .appAccent))
@@ -98,7 +98,7 @@ struct ActiveWorkoutView: View {
                     VStack(spacing: 4) {
                         Text("Workout Time")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                         Text(formatTime(elapsedTime))
                             .font(.title2.monospacedDigit())
                             .fontWeight(.bold)
@@ -115,7 +115,7 @@ struct ActiveWorkoutView: View {
                     VStack(spacing: 4) {
                         Text("Notes")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                         TextField("Add notes...", text: $workoutNotes, axis: .vertical)
                             .textFieldStyle(.roundedBorder)
                             .focused($isNotesFocused)
@@ -188,7 +188,7 @@ struct ActiveWorkoutView: View {
                         Button(action: previousExercise) {
                             Image(systemName: "chevron.left")
                                 .font(.title2.bold())
-                                .foregroundColor(.primary)
+                                .foregroundColor(.appTextPrimary)
                                 .frame(width: 44, height: 44)
                                 .background(.ultraThinMaterial, in: Circle())
                                 .shadow(color: Color.appAccentOpacity(0.12), radius: 4, x: 0, y: 2)
@@ -230,7 +230,7 @@ struct ActiveWorkoutView: View {
                         Button(action: nextExercise) {
                             Image(systemName: "chevron.right")
                                 .font(.title2.bold())
-                                .foregroundColor(.primary)
+                                .foregroundColor(.appTextPrimary)
                                 .frame(width: 44, height: 44)
                                 .background(.ultraThinMaterial, in: Circle())
                                 .shadow(color: Color.appAccentOpacity(0.12), radius: 4, x: 0, y: 2)
@@ -406,7 +406,7 @@ struct ExerciseCardView: View {
             VStack(spacing: 4) {
                 Text("Set \(set) of \(exercise.sets)")
                     .font(.headline)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.appTextPrimary)
                 Text("\(exercise.reps) reps")
                     .font(.title3)
                     .fontWeight(.semibold)
@@ -417,14 +417,14 @@ struct ExerciseCardView: View {
                 VStack(spacing: 4) {
                     Text("Rest Time")
                         .font(.headline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     Text("\(timeRemaining)")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.appAccent)
                     Text("seconds")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 .transition(.opacity)
             }

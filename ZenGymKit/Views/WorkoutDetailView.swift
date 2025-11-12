@@ -60,7 +60,7 @@ struct WorkoutDetailView: View {
                 
                 Text(workout.description)
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                     .multilineTextAlignment(.center)
             }
         }
@@ -174,11 +174,11 @@ struct InfoCard: View {
             Text(value)
                 .font(.headline)
                 .fontWeight(.bold)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
             
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -220,7 +220,7 @@ struct ExerciseRow: View {
                 
                 Text("\(exercise.sets) sets × \(exercise.reps) reps")
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
             
             Spacer()
@@ -233,7 +233,7 @@ struct ExerciseRow: View {
                 
                 Text("rest")
                     .font(.caption2)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
         }
         .padding(.vertical, 8)

@@ -25,7 +25,7 @@ struct SettingsView: View {
                             .frame(width: 24)
                         
                         Text("Dark mode always on")
-                            .foregroundColor(.primary)
+                            .foregroundColor(.appTextPrimary)
                         
                         Spacer()
                     }
@@ -43,13 +43,13 @@ struct SettingsView: View {
                                 .frame(width: 24)
                             
                             Text("Rate App")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.appTextPrimary)
                             
                             Spacer()
                             
                             Image(systemName: "chevron.right")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                         }
                     }
                     
@@ -62,13 +62,13 @@ struct SettingsView: View {
                                 .frame(width: 24)
                             
                             Text("Privacy Policy")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.appTextPrimary)
                             
                             Spacer()
                             
                             Image(systemName: "arrow.up.right.square")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                         }
                     }
                     
@@ -101,12 +101,12 @@ struct SettingsView: View {
                             .frame(width: 24)
                         
                         Text("Version")
-                            .foregroundColor(.primary)
+                            .foregroundColor(.appTextPrimary)
                         
                         Spacer()
                         
                         Text("1.0.0")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                     
                     HStack {
@@ -115,12 +115,12 @@ struct SettingsView: View {
                             .frame(width: 24)
                         
                         Text("Total Workouts")
-                            .foregroundColor(.primary)
+                            .foregroundColor(.appTextPrimary)
                         
                         Spacer()
                         
                         Text("\(workoutManager.workoutHistory.count)")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                     
                     HStack {
@@ -129,12 +129,12 @@ struct SettingsView: View {
                             .frame(width: 24)
                         
                         Text("Current Streak")
-                            .foregroundColor(.primary)
+                            .foregroundColor(.appTextPrimary)
                         
                         Spacer()
                         
                         Text("\(progressManager.currentStreak) days")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                 }
             }

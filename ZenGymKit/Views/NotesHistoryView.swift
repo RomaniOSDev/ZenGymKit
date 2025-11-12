@@ -95,7 +95,7 @@ struct NotesHistoryView: View {
             HStack {
                 HStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("Search notes...", text: $searchText)
                         .textFieldStyle(.plain)
@@ -106,7 +106,7 @@ struct NotesHistoryView: View {
                             searchText = ""
                         }) {
                             Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                         }
                     }
                 }
@@ -124,7 +124,7 @@ struct NotesHistoryView: View {
                 HStack {
                     Text("Filters:")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     if let mood = selectedMood {
                         HStack(spacing: 4) {
@@ -167,7 +167,7 @@ struct NotesHistoryView: View {
         VStack(spacing: 20) {
             Image(systemName: "note.text")
                 .font(.system(size: 60))
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
             
             Text("No Notes Found")
                 .font(.title2)
@@ -175,7 +175,7 @@ struct NotesHistoryView: View {
             
             Text("Start adding daily notes to see them here")
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
                 .multilineTextAlignment(.center)
             
             if !searchText.isEmpty || selectedMood != nil {
@@ -204,7 +204,7 @@ struct NoteCardView: View {
                     
                     Text(note.date, format: .dateTime.weekday())
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 
                 Spacer()
@@ -221,7 +221,7 @@ struct NoteCardView: View {
                         
                         Text("Energy")
                             .font(.caption2)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                 }
             }
@@ -281,7 +281,7 @@ struct StatItem: View {
             
             Text(unit)
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
     }
 }
@@ -300,7 +300,7 @@ struct NotePreviewRow: View {
             
             Text(text)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
                 .lineLimit(2)
         }
     }
@@ -318,7 +318,7 @@ struct FilterView: View {
                         selectedMood = nil
                         dismiss()
                     }
-                    .foregroundColor(selectedMood == nil ? .appAccent : .primary)
+                    .foregroundColor(selectedMood == nil ? .appAccent : .appTextPrimary)
                     
                     ForEach(Mood.allCases, id: \.self) { mood in
                         Button(action: {
@@ -335,7 +335,7 @@ struct FilterView: View {
                                 }
                             }
                         }
-                        .foregroundColor(selectedMood == mood ? .appAccent : .primary)
+                        .foregroundColor(selectedMood == mood ? .appAccent : .appTextPrimary)
                     }
                 }
             }
@@ -373,7 +373,7 @@ struct NoteDetailView: View {
                     
                     Text(note.date, format: .dateTime.weekday())
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 
                 // Mood and Energy
@@ -383,7 +383,7 @@ struct NoteDetailView: View {
                             .font(.title)
                         Text(note.mood.rawValue)
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                     
                     VStack(spacing: 4) {
@@ -393,7 +393,7 @@ struct NoteDetailView: View {
                             .foregroundColor(.appAccent)
                         Text("Energy")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                 }
                 
@@ -469,11 +469,11 @@ struct DetailStatCard: View {
             
             Text(unit)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
             
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -506,7 +506,7 @@ struct NoteDetailSection: View {
             
             Text(text)
                 .font(.body)
-                .foregroundColor(.primary)
+                .foregroundColor(.appTextPrimary)
         }
         .padding()
         .background(

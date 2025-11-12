@@ -58,7 +58,7 @@ struct WorkoutSelectionView: View {
             
             Text("Choose from our curated collection of workouts designed for all fitness levels")
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
         }
@@ -95,14 +95,14 @@ struct QuickWorkoutCard: View {
                 Text(workout.name)
                     .font(.headline)
                     .fontWeight(.semibold)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.appTextPrimary)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                 
                 // Duration
                 Text("\(workout.estimatedDuration) min")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                 
                 // Difficulty badge
                 Text(workout.difficulty.rawValue)

@@ -14,11 +14,12 @@ struct StartView: View {
     @StateObject private var notesManager = NotesManager()
     var body: some View {
         ContentView()
+            .preferredColorScheme(.dark)
             .environmentObject(workoutManager)
             .environmentObject(progressManager)
             .environmentObject(settingsManager)
             .environmentObject(notesManager)
-            .preferredColorScheme(.dark)
+            
     }
 }
 

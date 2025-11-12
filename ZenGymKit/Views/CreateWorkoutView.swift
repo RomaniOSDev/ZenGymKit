@@ -58,7 +58,7 @@ struct CreateWorkoutView: View {
                     Section("Exercises") {
                         if exercises.isEmpty {
                             Text("No exercises added yet")
-                                .foregroundColor(.secondary)
+                                .foregroundColor(.appTextSecondary)
                                 .italic()
                         } else {
                             ForEach(Array(exercises.enumerated()), id: \.offset) { index, exercise in
@@ -201,7 +201,7 @@ struct CreateWorkoutExerciseRow: View {
                 
                 Text("\(exercise.sets) sets × \(exercise.reps) reps")
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
             }
             
             Spacer()

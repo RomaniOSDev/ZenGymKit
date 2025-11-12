@@ -93,7 +93,7 @@ struct DailyNoteFormView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("How are you feeling today?")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.appTextSecondary)
                 
                 HStack(spacing: 12) {
                     ForEach(Mood.allCases, id: \.self) { mood in
@@ -107,7 +107,7 @@ struct DailyNoteFormView: View {
                                 
                                 Text(mood.rawValue)
                                     .font(.caption)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(.appTextSecondary)
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 12)
@@ -130,7 +130,7 @@ struct DailyNoteFormView: View {
                 HStack {
                     Text("Energy Level")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     Spacer()
                     
@@ -164,7 +164,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Sleep Hours")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     HStack {
                         Text(String(format: "%.1f", note.sleepHours))
@@ -174,7 +174,7 @@ struct DailyNoteFormView: View {
                         
                         Text("hrs")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                     
                     Slider(value: Binding(
@@ -191,7 +191,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Water Intake")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     HStack {
                         Text("\(note.waterIntake)")
@@ -201,7 +201,7 @@ struct DailyNoteFormView: View {
                         
                         Text("glasses")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.appTextSecondary)
                     }
                     
                     HStack(spacing: 8) {
@@ -249,7 +249,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Weight")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("kg", value: Binding(
                         get: { note.weight ?? 0 },
@@ -267,7 +267,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Body Fat %")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("%", value: Binding(
                         get: { note.bodyFat ?? 0 },
@@ -285,7 +285,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Muscle Mass")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("kg", value: Binding(
                         get: { note.muscleMass ?? 0 },
@@ -314,7 +314,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Nutrition")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("What did you eat today?", text: Binding(
                         get: { note.nutrition },
@@ -332,7 +332,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Workout Notes")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("How was your workout?", text: Binding(
                         get: { note.workoutNotes },
@@ -350,7 +350,7 @@ struct DailyNoteFormView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("General Notes")
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     
                     TextField("Any other thoughts for today?", text: Binding(
                         get: { note.generalNotes },

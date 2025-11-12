@@ -86,7 +86,7 @@ struct DailyNotesView: View {
                     
                     Text(selectedDate, format: .dateTime.weekday())
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                 }
                 
                 Spacer()
@@ -201,7 +201,7 @@ struct DailyNotesView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Current Streak")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.appTextSecondary)
                     Text("\(notesManager.getCurrentStreak()) days")
                         .font(.title2)
                         .fontWeight(.bold)
@@ -243,7 +243,7 @@ struct DailyNotesStatCard: View {
         VStack(spacing: 8) {
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
             
             Text(value)
                 .font(.title2)
@@ -252,7 +252,7 @@ struct DailyNotesStatCard: View {
             
             Text(subtitle)
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -285,7 +285,7 @@ struct DailyNotesAnalyticsCard: View {
             
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.appTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding()

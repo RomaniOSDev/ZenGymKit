@@ -33,6 +33,9 @@
 		748A5E1C2EC334C800491205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A5E002EC334C800491205 /* SceneDelegate.swift */; };
 		748A5E1D2EC334C800491205 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A5E012EC334C800491205 /* StartView.swift */; };
 		748A5E1E2EC334C800491205 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A5E022EC334C800491205 /* ViewController.swift */; };
+		74FB775A2EC4B954008564CE /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB77562EC4B954008564CE /* CheckLink.swift */; };
+		74FB775B2EC4B954008564CE /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB77572EC4B954008564CE /* InternetViewController.swift */; };
+		74FB775C2EC4B954008564CE /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB77582EC4B954008564CE /* LoaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		748A5E002EC334C800491205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		748A5E012EC334C800491205 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		748A5E022EC334C800491205 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74FB77562EC4B954008564CE /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		74FB77572EC4B954008564CE /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		74FB77582EC4B954008564CE /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		78EFBDDBE7AE1D60A31A9E4D /* Pods-ZenGymKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenGymKit.release.xcconfig"; path = "Target Support Files/Pods-ZenGymKit/Pods-ZenGymKit.release.xcconfig"; sourceTree = "<group>"; };
 		962165DB447A3A1D6965B4B1 /* Pods-ZenGymKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenGymKit.debug.xcconfig"; path = "Target Support Files/Pods-ZenGymKit/Pods-ZenGymKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,7 @@
 				748A5DF42EC334C800491205 /* WorkoutDetailView.swift */,
 				748A5DF52EC334C800491205 /* WorkoutSelectionView.swift */,
 				748A5DF62EC334C800491205 /* WorkoutView.swift */,
+				74FB77592EC4B954008564CE /* LoadingView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +161,16 @@
 				748A5E022EC334C800491205 /* ViewController.swift */,
 			);
 			path = ZenGymKit;
+			sourceTree = "<group>";
+		};
+		74FB77592EC4B954008564CE /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				74FB77562EC4B954008564CE /* CheckLink.swift */,
+				74FB77572EC4B954008564CE /* InternetViewController.swift */,
+				74FB77582EC4B954008564CE /* LoaderViewController.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		B3FD9D54374A6737FC8BC756 /* Pods */ = {
@@ -278,6 +295,9 @@
 				748A5E0D2EC334C800491205 /* WorkoutManager.swift in Sources */,
 				748A5E0E2EC334C800491205 /* ActiveWorkoutView.swift in Sources */,
 				748A5E0F2EC334C800491205 /* BlurView.swift in Sources */,
+				74FB775A2EC4B954008564CE /* CheckLink.swift in Sources */,
+				74FB775B2EC4B954008564CE /* InternetViewController.swift in Sources */,
+				74FB775C2EC4B954008564CE /* LoaderViewController.swift in Sources */,
 				748A5E102EC334C800491205 /* CreateWorkoutView.swift in Sources */,
 				748A5E112EC334C800491205 /* DailyNoteFormView.swift in Sources */,
 				748A5E122EC334C800491205 /* DailyNotesView.swift in Sources */,
@@ -339,7 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhu.w1nz3n4sc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -377,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhu.w1nz3n4sc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
